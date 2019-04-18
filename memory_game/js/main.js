@@ -29,11 +29,12 @@ var cardsInPlay=[];
 var checkForMatch = function(){
 	//var cardIdd =flipCard.cardId.getAttribute('data-id');
 
-	
+	if(cardsInPlay.length>1){
 	if (cardsInPlay[0] === cardsInPlay[1]) {
   alert("You found a match!");
 } else {
   alert("Sorry, try again.");
+}
 }
 }//endOfCheckmatch
 
@@ -46,6 +47,7 @@ console.log(cards[cardId].cardImage);
 console.log(cards[cardId].suit);
 
 this.setAttribute('src',cards[cardId].cardImage);
+
 checkForMatch();	
 
 }//endOfflipCard
@@ -59,6 +61,20 @@ var createBoard = function(){
     // Logic here
 }
 }
+var RestGame = function(){
+	var RestImg=document.getElementById('game-board');
+	for (var i = 0; i < cards.length; i++) {
+		
+		RestImg.childNodes[i].setAttribute('src', 'images/back.png');
+		cardsInPlay.pop();
+		
+	}
+		
+	
+
+}
 //calling the functions
 createBoard();
+
+
 //checkForMatch();

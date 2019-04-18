@@ -19,6 +19,7 @@ a{
 	margin-right: 20px;
 	margin-left: 20px;
 	border-bottom: 2px solid transparent;
+	text-decoration: none;
 }
 h2{
 	font-family:"raileway",sans-serif;
@@ -52,7 +53,8 @@ img{
 	margin-left: 8px;
 }
 footer{
-	
+
+	text-transform: uppercase;
 	padding-right: 20px
 	padding-left: 20px;
 	background-color: #0D2C40;
